@@ -6,7 +6,7 @@ A simple weather dashboard that allows users to search for the current weather a
 
 1. Clone the repository.
 2. Install dependencies with `npm install`.
-3. Run the JSON server using `json-server --watch db.json --port 3000`.
+3. Run the JSON server using `json-server --watch db.json --port 5000`.
 4. Replace `YOUR_OPENWEATHERMAP_API_KEY` in `WeatherDashboard.js` with your actual API key from OpenWeatherMap.
 5. Start the React app with `npm start`.
 

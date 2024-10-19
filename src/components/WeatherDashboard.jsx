@@ -6,7 +6,7 @@ import Toggle from "./Toggle";
 
 
 const API_KEY = "39a358bb9024eceb0a14aab609d4f79f"; // Replace with your OpenWeather API Key
-const SERVER_URL = "http://localhost:3000/favorites"; // JSON server URL
+const SERVER_URL = "http://localhost:5000/favorites"; // JSON server URL
 
 function App() {
   const [weather, setWeather] = useState(null);
