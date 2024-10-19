@@ -17,3 +17,6 @@ A simple weather dashboard that allows users to search for the current weather a
 - Remove cities from favorites.
 - Display weather data for favorite cities.
 - Toggle between Celsius and Fahrenheit units.
+
+## Demo
+![Screenshot 2024-10-19 173542](https://github.com/user-attachments/assets/dfd552f3-01ac-42bf-af75-8097bbf2fdb7)
