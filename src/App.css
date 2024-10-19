@@ -1,38 +1,124 @@
-.App {
+/* Main container */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f7;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Search */
+.search-container input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 70%;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.search-container button {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #218838;
+}
+
+/* Weather Display */
+.weather-display, .favorite-weather {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Forecast Container */
+.forecast-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.forecast-day {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Favorites List */
+.favorite-city {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  background-color: #e2e6ea;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.favorite-city button.delete {
+  padding: 10px 12px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.favorite-city button.delete:hover {
+  background-color: #c82333;
+}
+
+/* Toggle */
+.temperature-toggle {
+  margin: 20px 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.temperature-toggle label {
+  font-size: 16px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.temperature-toggle input {
+  margin-right: 10px;
 }
+
+.add-favorite {
+  background-color: #4CAF50; 
+  border: none; 
+  color: white; 
+  padding: 10px 15px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block;
+  font-size: 16px; 
+  margin: 5px 2px; 
+  cursor: pointer; 
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s; 
+}
+
+.add-favorite:hover {
+  background-color: #45a049; 
+  transform: scale(1.05); 
+}
+
+.add-favorite:active {
+  transform: scale(0.95); 
+}
+
