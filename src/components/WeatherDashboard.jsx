@@ -4,7 +4,6 @@ import Favorites from "./Favorite";
 import WeatherDisplay from "./WeatherDisplay";
 import Toggle from "./Toggle";
 
-
 const API_KEY = "39a358bb9024eceb0a14aab609d4f79f"; // Replace with your OpenWeather API Key
 const SERVER_URL = "http://localhost:5000/favorites"; // JSON server URL
 
@@ -65,7 +64,8 @@ function App() {
         });
 
         if (response.ok) {
-          setFavorites([...favorites, newFavorite]);
+          const savedFavorite = await response.json(); // Get the saved favorite with id
+          setFavorites([...favorites, { ...newFavorite, id: savedFavorite.id }]); // Use the new id
         }
       } catch (error) {
         console.error("Failed to add favorite city:", error);
@@ -82,7 +82,8 @@ function App() {
         });
 
         if (response.ok) {
-          setFavorites(favorites.filter((fav) => fav.name !== cityName));
+          // Remove from state immediately after successful deletion
+          setFavorites((prevFavorites) => prevFavorites.filter((fav) => fav.id !== cityToDelete.id));
         }
       } catch (error) {
         console.error("Failed to delete favorite city:", error);
